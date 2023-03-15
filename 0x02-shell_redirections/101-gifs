@@ -1,0 +1,2 @@
+#!/bin/bash
+find . -type f -iname '*.gif' -printf '%f\n' | sed 's/\.[^.]*$//' | LC_COLLATE=C sort | tr '\n' '\0' | xargs -0 -I{} basename "{}" | tr '[:upper:]' '[:lower:]' | LC_COLLATE=C sort | uniq
