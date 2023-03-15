@@ -1,2 +1,2 @@
-#!/bin/bask
+#!/bin/bash
 find . -type d -empty -printf '%f\n' \( -type f -empty -printf '%f\n' -o -print -quit \) | head -n -1
